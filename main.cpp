@@ -50,4 +50,16 @@ int main() {
             edgewoodArray[x].push_back(assignmentName);
         }
     }
+    
+    //Output all
+    for (int x = 0; x < edgewoodArray.size(); x++){
+        //Output title based on index of x
+        std::cout << classTitle[x] << "\n";
+
+        
+        for (int y = 0; y < edgewoodArray[x].size(); y++){
+            //Output assignment name based on index x for the instance position (Class) and index y for the assignment position
+            std::cout << "\t" << edgewoodArray[x][y] << "\n";
+        }
+    }
 }
