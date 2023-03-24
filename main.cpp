@@ -28,4 +28,26 @@ int main() {
     std::cout << "Enter number of classes: ";
     std::cin >> classAmount;
     std::cin.ignore();
+    
+    //Class name, number of assignments, assignment name(s)
+    for (int x = 0; x < classAmount; x++){
+        std::cout << "Enter name of class " << x + 1 << ": ";
+        getline(std::cin, className);
+
+        //Push className into classTitle array
+        classTitle.push_back(className);
+        
+        std::cout << "Enter number of assignments for " << className << ": ";
+        std::cin >> assignmentAmount;
+        std::cin.ignore();
+        edgewoodArray.resize(assignmentAmount);
+        
+        for (int y = 0; y < assignmentAmount; y++){
+            std::cout << "Enter name of assignment " << y + 1 << ": ";
+            getline(std::cin, assignmentName);
+
+            //Push assignmentName into the index of x
+            edgewoodArray[x].push_back(assignmentName);
+        }
+    }
 }
